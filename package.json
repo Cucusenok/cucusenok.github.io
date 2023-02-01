@@ -1,6 +1,7 @@
 {
   "name": "cv",
   "version": "0.1.0",
+  "homepage": "https://github.com/Cucusenok/cucusenok.github.io",
   "private": true,
   "dependencies": {
     "@emotion/css": "^11.10.5",
@@ -42,7 +43,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -63,6 +66,7 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.191"
+    "@types/lodash": "^4.14.191",
+    "gh-pages": "^5.0.0"
   }
 }
