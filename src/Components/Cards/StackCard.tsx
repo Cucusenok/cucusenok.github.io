@@ -4,7 +4,7 @@ import {styled} from "@mui/system";
 
 const Container = styled('div')({
     width: "100%",
-    height: "60px",
+    height: "6 0px",
     background: "rgba(0,0,0, 0.6)"
 });
 

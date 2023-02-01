@@ -1,80 +1,99 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import {BaseBackground} from "./Components/Containers/BaseBackground";
-import {Home} from "./Pages/Home";
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import blue from '@mui/material/colors/blue';
+import { ThemeProvider } from '@mui/material/styles';
+import debounce from "lodash/debounce"
+import {useTheme} from "@mui/material";
+import {BreakpointValues, theme} from "./common/theme";
+import {DESKTOP_ROUTES, MOBILE_ROUTES} from "./common/routes";
+import {GlobalContext, GlobalContextDefault} from "./common/globalContext";
 
-const theme = createTheme({
 
-  components: {
-  },
+let currentResizeTimeOut: ReturnType<typeof setTimeout>;
 
-  palette: {
-    primary: {
-      main: '#ffffff',
-    },
+const updateAppHeight = () => {
+  const doc = document.documentElement
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 
-  },
+  currentResizeTimeOut = setTimeout( () => {
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+  }, 500)
+}
 
-  typography: {
-    fontFamily: 'Sora',
+const resizeDebounce = debounce(updateAppHeight, 500)
 
-    h1: {
-      fontSize: "2.5rem",
-      color: "white",
-      fontWeight: "bold",
-      padding: "0px",
-      margin: "0px",
-      lineHeight: "2.5rem"
-    },
-    h2: {
-      fontSize: "2rem",
-      lineHeight: "2rem",
-      color: "white",
-      fontWeight: "bold",
-      padding: "0px",
-      margin: "0px"
-    },
-    h4: {
-      fontSize: "1rem",
-      color: "white",
-      fontWeight: "bold",
-      padding: "0px",
-      margin: "0px"
-    },
-    h5: {
-      fontSize: "0.8rem",
-      color: "white",
-      fontWeight: "bold",
-      padding: "0px",
-      margin: "0px"
-    },
+let lastResizeValue = window.innerWidth;
 
+window.addEventListener('orientationchange', (event) => {
+  /*
+    It`s not better solution, I know
+    This must execute just on tablets
+    for update routes
+    check createBrowserRouter method
+ */
+  if((window.innerWidth >= BreakpointValues.lg && lastResizeValue < BreakpointValues.lg)
+      || (window.innerWidth < BreakpointValues.lg && lastResizeValue >= BreakpointValues.lg)) {
+    window.location.reload();
   }
+  lastResizeValue = window.innerWidth;
 });
 
 
-function App() {
+const onResize = () => {
+  if(currentResizeTimeOut) { clearTimeout(currentResizeTimeOut) }
+  resizeDebounce();
+}
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-  ]);
+const init = () => {
+  window.addEventListener('resize', onResize)
+  onResize();
+}
+
+
+let lastChangePosition = 0;
+
+function App() {
+  const them = useTheme();
+  const appWidth = window.innerWidth;
+
+  init();
+  const isLgBreakpoint = appWidth >= them.breakpoints.values.lg;
+  const router = createBrowserRouter(isLgBreakpoint ? DESKTOP_ROUTES : MOBILE_ROUTES);
+
+  const [hideBecauseScroll, hideBecauseScrollSet] = useState(false);
+  const onScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if(window.innerWidth >= them.breakpoints.values.lg) {
+      return;
+    }
+    const target = e.target as HTMLDivElement;
+    const scrollTop = target.scrollTop;
+    if (scrollTop < 0) {
+      lastChangePosition = 0;
+      return;
+    } else if ((target.clientHeight + scrollTop) >= target.scrollHeight) {
+      return;
+    }
+    else if(scrollTop > lastChangePosition) {
+      hideBecauseScrollSet(true);
+    } else {
+      hideBecauseScrollSet(false);
+    }
+    lastChangePosition = scrollTop;
+  }
+
+
 
   return (
       <div className="App">
         <ThemeProvider theme={theme}>
           <BaseBackground>
-            <RouterProvider router={router} />
+            <GlobalContext.Provider value= {{...GlobalContextDefault, hideBecauseScroll, onScroll, }}>
+              <RouterProvider router={router} />
+            </GlobalContext.Provider>
           </BaseBackground>
         </ThemeProvider>
     </div>

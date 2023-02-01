@@ -1,25 +1,36 @@
 import React from "react";
-import BaseBackgroundHorizontalSvg from "../../Resources/Backgrounds/BaseBackgroundHorizontalSvg.svg";
 import { styled } from '@mui/system';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import {BaseBackgroundVerticalSvg} from "../../Resources/Backgrounds/BaseBackgroundVertical";
-import logo from "../../logo.svg"
+//import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Content = styled('div')({
     position: "absolute",
     left: 0,
     top: 0,
-    width: "100vw",
-    height: "100vh",
+    width: "100%",
+    height: "100%",
     overflow: "auto"
 });
 
-export const BaseBackground = (props: React.PropsWithChildren) => {
-    const isLandscape = useMediaQuery('(orientation: landscape)');
+const GradientBackground = styled('div')({
+    width: "100%",
+    height: "100%",
+    background: `linear-gradient(
+    257.78deg,
+     #EBB9FF 0.43%,
+     #CF61E1 22.3%,
+     #DA1B1B 60.64%,
+     #FAA321 91.77%
+     )`,
+});
 
-    return <div>
-        <div style={{width: "100vw", height: "100vh", background: "red"}}>
-            <img src={BaseBackgroundHorizontalSvg} width="100%" height="100%"/>
+//#e9b4fe
+// #FAA321
+
+
+export const BaseBackground = (props: React.PropsWithChildren) => {
+    return <div style={{height: "100%", width: "100%"}}>
+        <div style={{width: "100%", height: "100%",}}>
+            <GradientBackground />
         </div>
         <Content>
             { props.children }

@@ -11,7 +11,7 @@ type RectangleProps = {
 
 const Rectangle = styled('div')<RectangleProps>(({ height, borderRadius, padding, width}) => ({
     background: "rgba(0,0,0,.6)",
-    height: stringOrNumberCssPropertyTransform(height, "50px"),
+    height: stringOrNumberCssPropertyTransform(height, "none"),
     borderRadius: stringOrNumberCssPropertyTransform(borderRadius, "0px"),
     padding: stringOrNumberCssPropertyTransform(padding, "0px"),
     width: stringOrNumberCssPropertyTransform(width, "100%"),

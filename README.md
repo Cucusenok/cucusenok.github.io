@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Personal page with plans to create ready-to-use components for development
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Road Map
+
+1. Refactoring and optimization
+2. Move components to the library
+3. SSR friendly, [Fresnel](https://github.com/artsy/fresnel) for media queries and condition rendering with viewport. Maybe will better solutions.
+4. Create a search-tooltip component for searching in technologies stack. 
+Possible to use [tags dataset from kaggle](https://www.kaggle.com/datasets/isaacwen/stack-overflow-tags-data)
+or [stackexchange](https://data.stackexchange.com/stackoverflow), [an example](https://data.stackexchange.com/stackoverflow/query/edit/1697139)
+5. Maybe use [notion.so](https://www.notion.so/) for creation of posts and use [Notion API](https://developers.notion.com/)
+6. Full search on the site. Look on `/src/Components/Typography/SearchableTypography.tsx`.
+I han several experiments with [fusejs](https://fusejs.io/), for fuzzy-searching on the client side.
+I rejected this idea because it's look's unusable for searching in Stack/Project, 
+but maybe it would be a good solution for full site search
 
 ## Available Scripts
 
@@ -32,15 +44,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
