@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import {BaseBackground} from "./Components/Containers/BaseBackground";
@@ -62,7 +62,7 @@ function App() {
 
   init();
   const isLgBreakpoint = appWidth >= them.breakpoints.values.lg;
-  const router = createBrowserRouter(isLgBreakpoint ? DESKTOP_ROUTES : MOBILE_ROUTES);
+  const router = createHashRouter(isLgBreakpoint ? DESKTOP_ROUTES : MOBILE_ROUTES);
 
   const [hideBecauseScroll, hideBecauseScrollSet] = useState(false);
   const onScroll = (e: React.UIEvent<HTMLDivElement>) => {
