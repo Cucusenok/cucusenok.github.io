@@ -1,12 +1,12 @@
 import React, {MutableRefObject, useRef} from "react";
-import {BaseContainer} from "../../../Components/Containers/BaseContainer";
+import {BaseContainer} from "../../Containers/BaseContainer";
 import {Typography} from "@mui/material";
 import Spacer from "../../../Components/Untils/Spacer";
 import {useGlobalContext} from "../../../common/globalContext";
 import { Collapse } from '@mui/material';
-import { BottomSheet } from "../../../Components/BottomSheet/BottomSheet";
+import { BottomSheet } from "../../BottomSheet/BottomSheet";
 import {SearchableLayoutProps} from "./types";
-import { Content } from "./styled";
+import {Children, Content} from "./styled";
 import SearchInput from "../../../Components/SearchInput/SearchInput";
 
 
@@ -19,10 +19,13 @@ export const SearchableLayout = (props: SearchableLayoutProps) => {
     }
 
     return <BaseContainer>
+
         <BottomSheet openRef={ref} title={props.title}>
             { props.BottomSheet }
         </BottomSheet>
+
         <Content>
+            <Spacer height={40} />
             <Typography variant="h1">
                 { props.title }
             </Typography>
@@ -37,9 +40,10 @@ export const SearchableLayout = (props: SearchableLayoutProps) => {
                 />
                 <Spacer height={10} />
             </Collapse>
-            { props.children }
+            <Children>
+                 { props.children }
+            </Children>
             <Spacer height={15} />
         </Content>
     </BaseContainer>
-
 }

@@ -10,7 +10,7 @@ import {
 } from "./styled";
 import {SearchableLayout} from "../../Components/Layouts/SearchableLayout/SearchableLayout";
 import CardNavigationHeader from "../../Components/Cards/CardNavigationHeader/CardNavigationHeader";
-import {ScrollableListContainer, ScrollBottomSpacer} from "../../Components/Layouts/SearchableLayout/styled";
+import {ScrollableListContainer} from "../../Components/Layouts/SearchableLayout/styled";
 import {CalculateLogoImageSize} from "../../library/componentsUntils";
 import {Typography} from "@mui/material";
 
@@ -35,12 +35,11 @@ const ProjectItem = ({item} : { item: ProjectType }) => {
 }
 
 const ProjectList = ({searchList}: ProjectListProps) => {
-    const { onScroll, hideBecauseScroll } = useGlobalContext();
-    return <ScrollableListContainer onScroll={onScroll} hideBecauseScroll={hideBecauseScroll}>
+    const { onScroll } = useGlobalContext();
+    return <ScrollableListContainer onScroll={onScroll}>
         {
             searchList.map( si => <ProjectItem key={si.name} item={si} /> )
         }
-        <ScrollBottomSpacer />
     </ScrollableListContainer>
 }
 

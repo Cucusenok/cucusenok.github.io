@@ -1,4 +1,4 @@
-import React, {ReactNode} from "react";
+import React, {CSSProperties, ReactNode} from "react";
 
 export type StackType = {
     name: string,
@@ -8,7 +8,7 @@ export type StackType = {
 }
 
 export type ScrollableListContainerProps = {
-    hideBecauseScroll?: boolean,
+    css?: CSSProperties
 }
 
 export type StackListProps = {

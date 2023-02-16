@@ -1,4 +1,4 @@
-import React from "react";
+import React, {CSSProperties} from "react";
 import {styled} from '@mui/system';
 import ProfileIconSvg from "../../Resources/Icons/ProfileIconSvg";
 import StackIcon from "../../Resources/Icons/StackIconSvg";
@@ -15,6 +15,7 @@ const Content = styled('div')({
     width: "100%",
     display: "flex",
     flexDirection: "column",
+    alignItems: "stretch",
     justifyContent: "space-between",
 });
 
@@ -64,14 +65,18 @@ const MenuItem = styled(Link)({
 })
 
 
-type ChildrenProps = { hideBecauseScroll?: boolean }
-const Children = styled('div')<ChildrenProps>(({theme, hideBecauseScroll}) => ({
-    height: "100%",
-    maxHeight: `calc(var(--app-height) - ${hideBecauseScroll ? 0 : MENU_HEIGHT}px)`,
+type ChildrenProps = { css?: CSSProperties }
+const Children = styled('div')<ChildrenProps>(({theme, css}) => ({
+    maxHeight: `calc(100% - 0px)`,
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
     overflowY: "auto",
     [theme.breakpoints.up('lg')] : {
         maxHeight: `var(--app-height) !important`,
-    }
+    },
+    ...css
 }));
 
 export const RenderMenu = () => {
@@ -102,10 +107,8 @@ export const RenderMenu = () => {
 }
 
 export const BaseContainer = (props: React.PropsWithChildren) => {
-    const { hideBecauseScroll } = useGlobalContext();
-
     return <Content>
-        <Children hideBecauseScroll={hideBecauseScroll}>
+        <Children>
             {props.children}
         </Children>
         <RenderMenu />

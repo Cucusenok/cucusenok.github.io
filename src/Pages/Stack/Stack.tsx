@@ -19,7 +19,7 @@ import {SearchableLayout} from "../../Components/Layouts/SearchableLayout/Search
 import CardNavigationHeader from "../../Components/Cards/CardNavigationHeader/CardNavigationHeader";
 import {Checkbox, FormControlLabel, Typography} from "@mui/material";
 import Tabs from "@mui/material/Tabs";
-import {ScrollableListContainer, ScrollBottomSpacer, TabStyled} from "../../Components/Layouts/SearchableLayout/styled";
+import {ScrollableListContainer, TabStyled} from "../../Components/Layouts/SearchableLayout/styled";
 import {CalculateLogoImageSize} from "../../library/componentsUntils";
 
 const StackItem = ({item} : { item: StackType }) => {
@@ -47,12 +47,11 @@ const StackItem = ({item} : { item: StackType }) => {
 }
 
 const StackList = ({searchList}: StackListProps) => {
-    const { onScroll, hideBecauseScroll } = useGlobalContext();
-    return <ScrollableListContainer onScroll={onScroll} hideBecauseScroll={hideBecauseScroll}>
+    const { onScroll } = useGlobalContext();
+    return <ScrollableListContainer onScroll={onScroll}>
         {
             searchList.map( si => <StackItem key={si.name} item={si} /> )
         }
-        <ScrollBottomSpacer />
     </ScrollableListContainer>
 }
 
@@ -159,7 +158,6 @@ export const Stack = ({ showTitle=true }: StackProps) => {
         }
         checkListSet(newCheckList)
     };
-
 
     return <SearchableLayout
         title={ showTitle ? "Stack" : ""}
