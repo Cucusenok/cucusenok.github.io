@@ -14,6 +14,7 @@ I han several experiments with [fusejs](https://fusejs.io/), for fuzzy-searching
 I rejected this idea because it's look's unusable for searching in Stack/Project, 
 but maybe it would be a good solution for full site search
 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -42,3 +43,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+### `npm run deploy`
+
+### `npm run deploy -- -m "commit message here"`
+
+**Note: Deploy app to [github pages](https://pages.github.com/)
+more about deploy react apps to github pages [here](https://github.com/gitname/react-gh-pages) and [here](https://www.npmjs.com/package/gh-pages).**
