@@ -10,6 +10,8 @@ const MEDIA_MAX_WIDTH_330 = '@media (max-width: 330px)'
 const MEDIA_MAX_WIDTH_340 = '@media (max-width: 340px)'
 const MEDIA_MAX_WIDTH_370 = '@media (max-width: 370px)'
 const MEDIA_MAX_WIDTH_550 = '@media (max-width: 550px)'
+const MEDIA_MAX_HEIGHT_660 = '@media (max-height: 660px)'
+const MEDIA_MAX_HEIGHT_550 = '@media (max-height: 550px)'
 
 
 export const ProfileImg = styled('img')(({theme}) => ({
@@ -188,6 +190,12 @@ export const AboutMeText = styled(Typography)(({theme}) => ({
     },
     [MEDIA_MAX_WIDTH_550]: {
         fontSize: "0.9em",
+        [MEDIA_MAX_HEIGHT_660]: {
+            fontSize: "0.8em",
+        },
+        [MEDIA_MAX_HEIGHT_550]: {
+            fontSize: "0.7em",
+        }
     },
     [MEDIA_MAX_WIDTH_370]: {
         fontSize: "12px",
