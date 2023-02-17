@@ -47,7 +47,7 @@ export const STACKS_ITEMS: Array<StackType> = [
       отдельный микросервис или когда понимал, что команда сможет поддерживать только js.
       `,
             en: `Everything started with the HTML and jquery.
-      Then I wanted to improve interfaces and then work on interfaces, I especially liked working on new ideas in UX.
+      Then I aimed to enhance interfaces and devoted myself to working on them. I especially liked working on new ideas in UX.
       In all the time I've been working with js I've made dozens of website builds, web-terminal, code editor, streaming services for games using pixel-streaming from Unreal Engine and video streaming using HLS and ffmpeg for small projects.
       For these projects, react and vue and material ui became the main tools for application development.
       Automatic form generation based on jsonschema which was based on yang-models. I adapted the styles of embedded third-party frames using MutationObserver.
@@ -74,7 +74,7 @@ export const STACKS_ITEMS: Array<StackType> = [
       `,
             en: `I first experienced React when our frontend developer gave up trying to understand a bunch of Pipes written in a functional style. It was an extreme dive, but sometimes it works.
       I use class components when I can't use functional components - the code is cleaner. I mostly use redux Reducing the risks of finding frontend developers.
-      Thunk and Sagas, worked with mobX and effector but last 2 years with redux-toolkit. Complex recursive components, building DSL based interfaces,
+      TI have worked with Thunk and Sagas, as well as mobX and effector, but in recent years I have been primarily using redux-toolkit. Complex recursive components, building DSL based interfaces,
       building UI systems UI systems with designer's idea of what's possible. WebSocket, WebRTC, Pixel Streaming from Unreal Engine.
       Component testing and using Storybooks.
       Little experience with SSR & SSG.`
@@ -127,7 +127,7 @@ export const STACKS_ITEMS: Array<StackType> = [
       An absolute plus when learning a new programming language.
       WebStorm, PyCharm, IntelliJ, GoLand were all already intuitive when solving problems and learning new languages.
       Especially the built-in features like http queries. Entire teams, when they learned about it, immediately started using it, which even could even partially replace Postman.
-      The only exception was C++ and C# where I would definitely choose Visual Studio.`
+      The only exception was for C++ and C#, for which I prefer to use Visual Studio.`
         },
         tags: [STACK_TAGS.Utilities]
 
@@ -166,9 +166,9 @@ export const STACKS_ITEMS: Array<StackType> = [
       за исключением некоторых ситуаций когда вы храните устаревшию версию и например при импорте таблицы из CSV нельзя выбрать
       символ-разделитель и что большие статьи и таблицы приводят к некоторым проблемам при сохранении в Confluence.
       `,
-            en: ` Confluence was used for work and Notion for personal use. Both tools have sufficient functionality except
-      in some situations where you store an outdated version and when you import a table from CSV, for example,
-      you cannot select delimiter character and that large articles and tables cause some problems when saving in Confluence.`
+            en: ` Confluence was utilized in the workplace while Notion was used for personal purposes. 
+            Both platforms have adequate functionality, however, in some cases where you retain an outdated version or import a CSV table, 
+            difficulties may arise such as the inability to choose a delimiter character and difficulties in saving large articles and tables in Confluence.`
         },
         tags: [STACK_TAGS.Utilities]
 
@@ -183,10 +183,11 @@ export const STACKS_ITEMS: Array<StackType> = [
       как многие другие. Он казался логичным и естественным продолжением и решал проблемы скорости работы DOM. Периодически посещавшие
       меня во время работы. Компоненты и JSX стали логичным продолжением.
       CSS, SCSS, styled components, css-modules и Emotion я тоже оставлю тут.`,
-            en: `In this section I put everything related to markup and its generation. Roughly speaking M in MVC.
-      The creator of the World Wide Web solved this problem for us as well, in fact I managed to work with smMobileHeightLT (eXtensible Stylesheet Language), Nowadays it's hard to find this technology, it's XML with loops, conditions and variables.
-      In general I had to deal with Jinja2(Django) and stuff like that in Laravel for example. I fell in love with vue/react instantly, like many others. It seemed like a logical and natural extension and solved the DOM speed problems. It came to me from time to time while I was working. Components and JSX were a logical follow-up.
-      CSS, SCSS, styled components, css-modules and Emotion - I leave it here too.
+            en: `In this section, I discuss everything related to markup and its generation, which roughly corresponds to the "M" in MVC. 
+            The creator of the World Wide Web has already solved this problem for us, and I have worked with eXtensible Stylesheet Language Transformations (XSLT), 
+            which is now a rare technology, as it's essentially XML with loops, conditions, and variables. I have also used Jinja2 in Django and Laravel, among others. 
+            I fell in love with Vue and React instantly, like many others, as they seemed like a logical and natural extension and solved the problem of slow DOM rendering. 
+           Components and JSX were a logical follow-up. Finally, I include CSS, SCSS, styled components, CSS modules, and Emotion, as they are also part of this section.
       `
         },
         experience: "5 years",
@@ -208,12 +209,13 @@ export const STACKS_ITEMS: Array<StackType> = [
       с Word2Vec, Doc2Vec, FastText, TensorFlow и gensim в NLP, благодаря которым, я написал свою дипломную работу и использовал
       классификаторы, как микросервис обернутый в Flask.
       `,
-            en: `I started learning python when I was in university, thanks to Mark Lutz and his 4th edition.
-      I didn't manage to work with python much commercially, it was mostly small microservices on Flask or FastApi.
-      Django was only used for university projects. Python for me was the most important tool  for everything: parsing and scraping,
-      testing features of third party libraries, bots, and interfaces using tkinter and PyQt.
-      It was the language that saved me from MatLab when I was doing an internship in the Artificial Intelligence Institute,
-      where I was introduced to with Word2Vec, Doc2Vec, FastText, TensorFlow, and gensim in NLP, thanks to which, I wrote my graduate work and used classifiers as a microservice wrapped in Flask.
+            en: `I started learning Python when I was in university, thanks to Mark Lutz and his 4th edition. 
+            Although I didn't have much commercial experience with Python, I worked on small microservices using Flask or FastApi. 
+            I only used Django for university projects. Python was my go-to tool for a variety of tasks such as parsing and scraping, 
+            testing third-party libraries, building bots, and creating interfaces using tkinter and PyQt. 
+            It was the language that helped me move away from MatLab during an internship at the Artificial Intelligence Institute, 
+            where I was introduced to NLP tools such as Word2Vec, Doc2Vec, FastText, TensorFlow, and gensim. 
+            These tools allowed me to write my graduate work and build classifiers as a microservice wrapped in Flask.
       `
         },
         tags: [STACK_TAGS.BackEnd]
@@ -231,7 +233,7 @@ export const STACKS_ITEMS: Array<StackType> = [
       Хочешь json - нужна библиотека, хочешь сделать http-запрос на windows - реши несколько проблем.
       Прошло уже несколько лет а помню до сих пор (проблемы а не c++).
       `,
-            en: `My first programming language. When I first saw Stroustrup's book, it was scared.
+            en: `My first programming language. When I first encountered Stroustrup's book, it was challenging.
       With him I learned how the world works, stack and heap, what references and pointers are, garbage collector, OOP, I used static_cast and dynamic_cast to study polymorphism. The first program I ever invented that was made in C++, using QT framework. All in all, it's hardening.
       You want json, you need library, you want to make http-request to windows, solve some problems.
       It's been a few years and I still remember (problems, not c++).
@@ -247,8 +249,8 @@ export const STACKS_ITEMS: Array<StackType> = [
         description: {
             ru: `.net and asp.net - только ознокомительные проекты, WinForm и стандартная библиотека. Последний раз освежал знания после выхода .asp.net.
       Опыт в тестировании используя white фреймворк.`,
-            en: `.net and asp.net - only the familiarization projects, WinForm and the standard library. Last time I refreshed my knowledge after the release of .asp.net.
-      Experience in testing using white framework.`
+            en: `I have only worked on familiarization projects with .net and asp.net, including WinForm and the standard library. 
+            My last refresh of knowledge was after the release of asp.net. My experience also includes testing using the white framework.`
         },
         tags: [STACK_TAGS.BackEnd]
 
@@ -266,14 +268,13 @@ export const STACKS_ITEMS: Array<StackType> = [
       Solr, ElasticSearch, Postgres, MySQL и RabbitMQ. Оформления собственных пакетов. Тут я впервые увидел настоящее легаси
       от которого кровь стынет в жилах, а автор кода не может объяснить почему тут так сделано. В целом если оценивать PHP -
       это пубертат. Язык довольно быстро учится, что позволило взять на себя задачи руководителя.`,
-            en: `I was young I really needed money. In general, I used the language as much as possible. From 5.6 to 7.4, the only thing missing was JIT. Always migrated to the latest versions. Used typification as soon as it came out.
-      We were building from Facebook while it made sense. Had some experiments with Yii, Symphony, but mostly I used Laravel.
-      It was thanks to the approach of this framework and its community that I was able to make complex projects.
-      I used Laravel as a service provider and successfully created services based on it using Solr, ElasticSearch, Postgres, MySQL and RabbitMQ. Designing my own packages.
-      This was the first time I've seen a real legacy which makes my blood run cold, while the author of the code can't explain why it's done so. All in all, if I evaluate PHP - it's puberty.
-      The language learns fairly quickly, which made it possible to take on the tasks of the team leader.
-
-      Translated with www.DeepL.com/Translator (free version)`
+            en: `When I was young, I was in need of money and used PHP as much as possible. I upgraded from version 5.6 to 7.4, taking advantage of new features such as typification. 
+            I tried different frameworks like Yii and Symphony, but mostly used Laravel for building projects. Laravel's approach and its supportive community enabled me to make complex projects. 
+            I utilized Laravel as a service provider and successfully created services using various technologies such as Solr, ElasticSearch, Postgres, MySQL, and RabbitMQ. 
+            I even designed my own packages. This was my first encounter with a true legacy codebase, which caused my blood ran cold since the original coder was unable to explain their reasoning behind it.
+            However, working with legacy code was a challenging experience and made me realize the importance of clear and maintainable code. 
+            Overall, my experience with PHP was like growing up and learning from my mistakes.
+      `
         },
         tags: [STACK_TAGS.BackEnd]
     },
@@ -317,7 +318,10 @@ export const STACKS_ITEMS: Array<StackType> = [
       кроссплатформенные библиотеки и написаны свои, общение которых, происходит через MethodChannel. Когда вопрос стал в выборе
       фреймворка для кроссплатформенной разработки проводя анализ и имея опыт например ReactNative - я пошел на риск и не пожалел.
       Да, проект не идеален, но как когда-то меня удивил QT сейчас это сделал Flutter.`,
-            en: `Everything for the project gomusic.to.UI implemented as planned in the design. BLoC methodology was mastered and implemented in the project. The application is successfully built for Android, IOS and WEB. Necessary cross-platform libraries were rewritten and their own libraries were written, which communicate via MethodChannel. When the question arose about choosing a framework for cross-platform development through analysis and experience such as ReactNative - I took a risk and did not regret it.
+            en: `Everything for the project gomusic.to.UI implemented as planned in the design. 
+            BLoC methodology was mastered and implemented in the project. The application is successfully built for Android, IOS and WEB. 
+            Necessary cross-platform libraries were rewritten and their own libraries were written, which communicate via MethodChannel. 
+            When the question arose about choosing a framework for cross-platform development through analysis and experience such as ReactNative - I took a risk and did not regret it.
       Yes, the project is not perfect, but as QT once surprised me, now Flutter has done it.
       `
         },
@@ -333,10 +337,12 @@ export const STACKS_ITEMS: Array<StackType> = [
       Я уже говорил, что экстремальное погружение в язык программирования работает, когда нужно?
       Контекст, горутины, каналы и гексогональная архитектура. Судя по всему идея упрощения и оптимизации языка
       работает действительно хорошо и с языком получилось ознакомится достаточно быстро. `,
-            en: `Everything for the project gomusic.to. Our backend developer wrote on anything possible. He fell in love with Go,
-      our DevOps wrote a little bit of Go and knew how to work with it. He sold us the idea, but then lost interest in the project.
-      Did I mention that extreme immersion in a programming language works when you need it?
-      Context, goroutines, channels, and hexagonal architecture. Apparently the idea of simplifying and optimizing the language works really well and the language has become familiar to me quite quickly.
+            en: `The project, gomusic.to, had its UI implemented as per the design specifications. 
+            I became proficient in the BLoC methodology and applied it in the project. 
+            The application was successfully built for Android, iOS, and web. I rewrote necessary cross-platform libraries and also wrote my own libraries, 
+            which communicate through MethodChannel. When faced with the decision of choosing a framework for cross-platform development, 
+            I took a risk with Flutter after considering my analysis and experience with alternatives like ReactNative, and I do not regret it. 
+            Although the project is not perfect, it has surprised me in the same way that QT did.
       `
         },
         tags: [STACK_TAGS.BackEnd]
@@ -426,9 +432,9 @@ export const STACKS_ITEMS: Array<StackType> = [
       Если упрощать, то фактически SQL является стандартом, а реализация и поддержка зависит от производителя обеспечения самих баз данных
       также как и других внутренних.
       Postgres`,
-            en: `A structured query language designed for databases based on relational algebra.
-      To simplify, SQL is actually a standard, and the implementation and support depends on the manufacturer of the database software itself as well as other internals.
-      Postgres`
+            en: `I have experience with SQL, a structured query language used for managing relational databases. 
+            SQL is a standard, with the specifics of its implementation and support varying among different database software manufacturers. 
+            Specifically, I have experience with Postgres.`
         },
         tags: [STACK_TAGS.BackEnd]
 
@@ -444,10 +450,10 @@ export const STACKS_ITEMS: Array<StackType> = [
       Для эластика дополнительно были созданы инструменты частично повторяющие функционал Kibana.
       Сложные агрегационные запросы, теггирование, настройка индексов и привилегий.
       `,
-            en: `As a part of one of the projects we had the task to develop a platform for application orchestration.
-      As a part of this project, we made an interface that allows to visualize data from different sources, such as ElasticSearch and Influx, as well as to divide the created indexes by user rights (using SSO).
-      For Elastic, additional tools have been created that partially replicate the functionality of Kibana.
-      Complex aggregation queries, tagging, index and privilege customization.
+            en: `I was part of a project with the objective to create a platform for application orchestration. 
+            We developed an interface that enables the visualization of data from sources such as ElasticSearch and Influx, 
+            and to categorize the indexes based on user rights using Single Sign-On (SSO). We also created supplementary tools for Elastic that mimic some of the features of Kibana. 
+            These tools include complex aggregation queries, tagging, index customization, and privilege customization.
       `
         },
         tags: [STACK_TAGS.Utilities]
@@ -459,8 +465,8 @@ export const STACKS_ITEMS: Array<StackType> = [
         description: {
             ru: `Резюмируя. Ознакомлен с time series базами данных. Настройка привилегий, получилось полностью повторить
       UI интерфейс из Influx 2.0 структуру measurements, fields & buckets запрашивалась при помощи python.`,
-            en: `To summarize. Familiarized with time series databases. Privilege customization,
-      got a full replication of the UI interface from Influx 2.0 the structure of measurements, fields & buckets was queried using python.`
+            en: `In summary, I am familiar with time series databases and have experience with privilege customization. 
+            I replicated the UI interface from Influx 2.0 and was able to query the structure of measurements, fields, and buckets using Python.`
         },
         tags: [STACK_TAGS.Utilities]
 
@@ -470,7 +476,15 @@ export const STACKS_ITEMS: Array<StackType> = [
         experience: `3 month`,
         logo: DesignLogo,
         description: {
-            ru: `Я часто работал над проектами, где в команде не было дизайнера, так я и погрузился в тему пользовательского опыта, я часто создавал дизайн и придумывал решения на ходу во время фронтенд разработки. Для меня всегда было важно, как именно человек будет пользоваться моим интерфейсом, я по максимуму упрощаю, минимизирую количество шагов, и добавляю пояснения, где есть вероятность заблудиться.  Для более объемных задач я освоил фигму.  Даже глубже чем дизайнеры - я писал плагины для нее, для автоматизации некоторых рутинных задач. Но на этом мой путь в дизайне только начинался. Для создания своего приложения мне было необходимо погрузиться в тему пользовательского взаимодействия. Я изучил принципы UX, узнал о законах построения дизайна и психологии восприятия пользователями. Так же капнул в сторону UI, с учетом моей деятельности, как разработчика - у меня уже была настроенность и я понимал, какой интерфейс проживет на рынке несколько следующих лет, исходя из этого я и создал дизайн для Gomusic.to. Так же беря во внимание привычные паттерны поведения (например я добавил строку ввода ссылки, несмотря на то, что приложение автоматически считывает буфер, для того, чтобы человек понял, что от него требуется вернуться в приложение со ссылкой - просто и понятно, без лишних слов)`,
+            ru: `Я часто работал над проектами, где в команде не было дизайнера, так я и погрузился в тему пользовательского опыта, 
+            я часто создавал дизайн и придумывал решения на ходу во время фронтенд разработки. Для меня всегда было важно, как именно человек будет пользоваться моим интерфейсом, 
+            я по максимуму упрощаю, минимизирую количество шагов, и добавляю пояснения, где есть вероятность заблудиться.  Для более объемных задач я освоил фигму.  
+            Даже глубже чем дизайнеры - я писал плагины для нее, для автоматизации некоторых рутинных задач. Но на этом мой путь в дизайне только начинался. 
+            Для создания своего приложения мне было необходимо погрузиться в тему пользовательского взаимодействия. Я изучил принципы UX, 
+            узнал о законах построения дизайна и психологии восприятия пользователями. Так же капнул в сторону UI, с учетом моей деятельности, как разработчика - у меня уже была настроенность и я понимал, 
+            какой интерфейс проживет на рынке несколько следующих лет, исходя из этого я и создал дизайн для Gomusic.to. Так же беря во внимание привычные паттерны поведения 
+            (например я добавил строку ввода ссылки, несмотря на то, что приложение автоматически считывает буфер, для того, чтобы человек понял, что от него требуется вернуться в приложение со ссылкой - 
+            просто и понятно, без лишних слов)`,
             en: 'I worked a lot on projects where the team didn\'t have a designer, so I got immersed in the topic of user experience, I was often designing and coming up with solutions on the go during frontend development. It\'s always been important to me exactly how a person would use my interface, I simplify as much as possible, minimize the number of steps, and add explanations where there\'s a chance of getting lost.  For more extensive tasks, I\'ve learned Figma.  Even deeper than designers - I wrote plugins for it, to automate some routine tasks. But that was only the beginning of my design journey. To create my app, I needed to dive into the topic of user interaction. I studied the principles of UX, learned about the laws of design construction and the psychology of user perception. I also dug into UI, taking into account my background as a developer - I already had an attitude and understanding of what kind of interface would be good for the next few years, so I created the design for Gomusic.to. Also taking into account the usual patterns of behavior (for example I added a link input line, even though the app automatically reads the buffer, so that the person understands that he has to go back to the app with the link - simple and clear, without any extra words)'
         },
         tags: [STACK_TAGS.FrontEnd]

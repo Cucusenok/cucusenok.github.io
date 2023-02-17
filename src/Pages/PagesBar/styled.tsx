@@ -15,13 +15,7 @@ export const SubContainer = styled('div')({
     display: "flex",
     width: "70%",
     height: "100%",
-    flexDirection: "column"
-/*    height: "700px",
     flexDirection: "column",
-    '& > div:first-child': {
-        background: "red",
-        flexShrink: 10,
-    }*/
 });
 
 export const TabStyled = styled(Tab)({

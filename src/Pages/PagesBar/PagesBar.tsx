@@ -19,16 +19,21 @@ export const PagesBar = () => {
         <Home />
         <SubContainer>
             <Spacer height={15} />
-            <Tabs style={{padding: "0 20px"}} variant={"fullWidth"} value={activePageTab} onChange={handleChange} aria-label="basic tabs example">
+            <Tabs style={{padding: "0 20px",}} variant={"fullWidth"} value={activePageTab} onChange={handleChange} aria-label="basic tabs example">
                 <TabStyled label="Stack" />
                 <TabStyled label="Projects" />
             </Tabs>
-            <Routes>
-                <Route path="projects" element={<Projects showTitle={false} />} />
-                <Route path="stack" element={<Projects showTitle={false} />} />
-                <Route path="/" element={ <Stack showTitle={false} />} />
-                <Route path="*" element={ <Navigate to={'/404'} />} />
-            </Routes>
+            <div style={{
+                overflowY: "hidden",
+                maxHeight: "100%",
+            }}>
+                <Routes>
+                    <Route path="projects" element={<Projects showTitle={false} />} />
+                    <Route path="stack" element={<Projects showTitle={false} />} />
+                    <Route path="/" element={ <Stack showTitle={false} />} />
+                    <Route path="*" element={ <Navigate to={'/404'} />} />
+                </Routes>
+            </div>
         </SubContainer>
     </Root>
 }

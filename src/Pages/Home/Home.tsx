@@ -112,12 +112,12 @@ export const Contacts = (props: ContactsProps) => {
                                 <ContactIcon key={c.link} type="image/svg+xml" data={c.icon}/>
                             </div>
                         } else {
-                            return <LinkWrapper key={idx} href={`mailto:${c.link}`}>
+                            return <LinkWrapper key={idx} href={`mailto:${c.link}`} target="_blank">
                                 <ContactIcon key={c.link} type="image/svg+xml" data={c.icon}/>
                             </LinkWrapper>
                         }
                     } else {
-                        return <ContactLink key={idx} href={c.link} >
+                        return <ContactLink key={idx} href={c.link} target="_blank">
                             <ContactIcon key={c.link} type="image/svg+xml" data={c.icon}/>
                         </ContactLink>
                     }
@@ -158,8 +158,9 @@ export const Home = () => {
                     </AboutMeContainer>
                     <DarkOpacityRectangle width={"calc(100% - 20px)"} borderRadius={15} padding={10}>
                         <AboutMeText variant="h5" textAlign={"start"}>
-                            I am senior full stack developer with over 6 years of experience in the industry.
-                            My expertise lies in languages such as Python, Java and JavaScript,
+                            I am software engineer with over 7 years of experience in the industry.
+                            My expertise lies in languages such as Python, JavaScript, GoLang,
+                            Dart,
                             as well as frameworks such as React, Flatter, Django, and Angular.
                             I am highly skilled in developing and maintaining RESTful APIs,
                             and have a strong understanding of database design, management an UX/UI Design.
@@ -170,7 +171,7 @@ export const Home = () => {
                     <Spacer height={"25%"} breakpoints={ {
                         [theme.breakpoints.up(theme.breakpoints.values.lg)]: { height: "20px", },
                     }}>
-                        <Button variant="contained" endIcon={<DownloadIcon />} fullWidth>
+                        <Button href={'cucusenok_cv.pdf'} variant="contained" endIcon={<DownloadIcon />} fullWidth download>
                             Download my CV
                         </Button>
                     </Spacer>

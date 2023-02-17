@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import './App.css';
 import {
   createHashRouter,
-  RouterProvider,
+  RouterProvider, Location,
 } from "react-router-dom";
 import {BaseBackground} from "./Components/Containers/BaseBackground";
 import { ThemeProvider } from '@mui/material/styles';
@@ -57,15 +57,21 @@ const init = () => {
 let lastChangePosition = 0;
 
 function App() {
+  init();
   const them = useTheme();
   const appWidth = window.innerWidth;
 
-  init();
   const isLgBreakpoint = appWidth >= them.breakpoints.values.lg;
   const router = createHashRouter(isLgBreakpoint ? DESKTOP_ROUTES : MOBILE_ROUTES);
 
   const [hideBecauseScroll, hideBecauseScrollSet] = useState(false);
-  const onScroll = (e: React.UIEvent<HTMLDivElement>) => {
+
+  /*
+    This function can be callback for any scrollable component
+    if u want hide menu or other UI elements. Use `useGlobalContext` + hideBecauseScroll
+    for conditional rendering
+   */
+  const onScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
     if(window.innerWidth >= them.breakpoints.values.lg) {
       return;
     }
@@ -83,15 +89,26 @@ function App() {
       hideBecauseScrollSet(false);
     }
     lastChangePosition = scrollTop;
-  }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
-
+  /*
+      workaround, reason - the react-router-dom context
+      callback have attached to BaseContainer component, this component must be
+      entry point for every page.
+   */
+  const onLocationChanged = useCallback((location: Location) => {
+    console.log('onLocationChanged')
+    // return menu if it was hidden
+    hideBecauseScrollSet(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
       <div className="App">
         <ThemeProvider theme={theme}>
           <BaseBackground>
-            <GlobalContext.Provider value= {{...GlobalContextDefault, hideBecauseScroll, onScroll, }}>
+            <GlobalContext.Provider value= {{...GlobalContextDefault, hideBecauseScroll, onScroll, onLocationChanged }}>
               <RouterProvider router={router} />
             </GlobalContext.Provider>
           </BaseBackground>

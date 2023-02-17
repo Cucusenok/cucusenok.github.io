@@ -72,7 +72,13 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
       тем параметрам, которые мы получаем первым кадром при подключении к сокету. Все графики и дашборды стилистически
       настраевыемые и могут быть размешенны как угодно в дашборде.
       `,
-            en: `O-RAN is the idea of collaborative mobile systems. To simplify it, if you have a device from company X that breaks down, you can replace it with a device from company Y, with no loss of compatibility. I went back to the world of paper notes and trial and error, as the field was a completely different world to me, and it was not easy to find good information. Our team was challenged to develop a system to monitor and configure CU/DU/RU. These devices can be implemented depending on the type of network in different architectures. The configuration of the device is provided by confD - our task was to make this config and deliver it via NETCONF. The project implemented a UI based on YANG-models (data model language). Depending on the version, the YANG model changes and the UI must automatically rebuild. It was a challenge to design such a UI first of all. However this interface has to be included in the global configuration system (NMS) and for a single network element (EMS) (including the case where a person can connect using a patch cord, click on a link in a browser and start the configuration). We also implemented a remote terminal for access to the machine with a very good user interface with iterability, search and pattern commands. Dashboards with graphs that are customized based on the parameters that we get the first frame when we connect to the socket. All graphs and dashboards are stylistically configurable and can be placed as desired in the dashboard.`
+            en: `O-RAN is the idea of standardization of mobile systems. Simply put, if your device from manufacturer X is out of service, you can replace it with 
+            a device from manufacturer Y without losing compatibility. I returned to the world of technical specifications and trial-and-error methods as this field was completely foreign to me 
+            and finding good information was not easy. Our team was tasked with developing a system for monitoring and configuring CU/DU/RU devices. 
+            These devices can be implemented in different architectures depending on the network type. The device configuration is provided by confD - 
+            our task was to compose this configuration and deliver it over the NETCONF protocol. As part of the project, a UI based on YANG models (a data model construction language) was implemented. 
+            The YANG model and the interface should change automatically depending on the version. This was a difficult task in terms of designing such a UI primarily. 
+            In turn, this interface must be included in the global configuration system (NMS) and for a separate network element (EMS) (including the case when a person can connect to it independently).`
         },
         images: []
     },
@@ -102,8 +108,14 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             en: `An orchestration, deployment and container control system. It was actually Kubernetes with a GUI.
       Zipkin tracing, MongoDB and Postgres data storage, Kafka and ElasticStack logging, RabbitMQ queues.
       For the convenience of working with logs we implemented an interface that allows you to quickly create GROK patterns on their basis.
-      We began to think about partially automating this process. Monitoring the state of all the containers in the system. We were able to manually stop, restart or start the container by clicking the button. We learned how to deploy applications in Java, Golang, Node.Js, Docker containers and static sites. Developed SSO system allowing to close the issue with authorization to related services, and use it in your system. Made a hierarchical RBAC system that could restrict Access to data based on user role to all storages of the system. An automatic rule based alerting system, which could be configured in the GUI. If we need a data structure - it should probably be a very flexible DSL. Planning and researching technical solutions, product analysis, collaborative system architecture, sometimes 2-3 months in advance. I sincerely regret that this project was closed. Wonderful team of professionals which I warmly remember and the highest efficiency I have ever seen.
-      I've read about it, but I was lucky enough to be involved.`
+      We began to think about partially automating this process. Monitoring the state of all the containers in the system. 
+      We were able to manually stop, restart or start the container by clicking the button. 
+      We learned how to deploy applications in Java, Golang, Node.Js, Docker containers and static sites. Developed SSO system allowing to close the issue with authorization to related services, 
+      and use it in your system. Made a hierarchical RBAC system that could restrict Access to data based on user role to all storages of the system. 
+      An automatic rule based alerting system, which could be configured in the GUI. If we need a data structure - it should probably be a very flexible DSL. 
+      Planning and researching technical solutions, product analysis, collaborative system architecture, sometimes 2-3 months in advance. 
+      I sincerely regret that this project was closed.The team was fantastic and I recall it with warmth, and their efficiency was the highest I've ever seen.
+      I've heard about it, but I was lucky enough to be part of it.`
         },
         images: []
     },
@@ -184,14 +196,13 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
       Некоторые из них были строчка в строчку, нахожу это забавным 😃
       Проекты были реализованы при помощи React и Vue.
       `,
-            en: `Web application controlling the Unreal Engine(UE) project with the ability to move around the city, select
-      apartments and go to them. The possibility of filtering the apartments by price, number of rooms, square footage, etc. Communication with the UE was implemented using Pixel Streaming over the WebRTC protocol.
-      The most difficult thing in this project was to figure out how UE implemented the WebRTC communication. From examples,
-      Safari and Mozilla had some simple bugs that were only fixed after a few revisions.
-      Some of them were line by line, I find that funny 😃
-      The projects were implemented with React and Vue.
-
-      Translated with www.DeepL.com/Translator (free version)`
+            en: `A web application that manages Unreal Engine (UE) projects with the ability to navigate around the city, 
+            choose apartments and enter them. The ability to filter apartments based on price, number of rooms, square footage, etc. was implemented. 
+            Communication with UE was realized through Pixel Streaming using the WebRTC protocol. The most challenging aspect of this project was figuring out how UE implemented communication through WebRTC. 
+            There were some simple errors in Safari and Mozilla that were only fixed in a few versions. 
+            Some of them were line by line, I find it amusing 😃. 
+            The projects were implemented using React and Vue.
+            `
         },
         images: [neo4web_1, neo4web_2, neo4web_3, neo4web_4, neo4web_5, neo4web_5]
     },
@@ -206,8 +217,9 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             ru: `Интеграция онлайн галлереи в уже существующий сайт. Идеальная вертска и учет всех нюансов
       для максимального правильного отображения фото и видео материалов. Разработка UI-kit, двойная
       аутентификация по номеру телефона.`,
-            en: `Integration of an online gallery into an existing website. Perfect layout and consideration of all nuances
-      for maximal correct display of photo and video materials. UI-kit development, double authentication by phone number.`
+            en: `Integration of an online gallery into an already existing website. 
+            Perfect layout and consideration of all details for the correct display of photo and video materials. 
+            Development of a UI-kit and double authentication by phone number.`
         },
         images: [frieze_1, frieze_2, frieze_3, frieze_4, frieze_5, frieze_6]
     },
@@ -230,13 +242,14 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
       Данный функционал был реализован при помощи RabbitMQ и нескольких воркеров которые вычитывали очереди.
       Количество активных пользователей доходило до 50 000 в день.
       `,
-            en: `We integrated the functionality of an app that replicates the mechanics of Tinder into the existing app.
-      The task was to increase interest in the brand by creating a marketing application, the users of which could actively interact with each other. The main idea: a user takes a test and sends a special link to a person, this person also takes a test and then they get matching results.
-      The client was implemented in Javascript + ReactJs, backend using PHP + Laravel. The database was MySQL.
-      Users needed to be notified after their friends were tested.
-      Due to limitations of the platform on the number of push notifications (1 per day), was invented a mechanic where the user activates special chatbot and all the notifications with the results received in the bot messages.
-      This functionality was implemented using RabbitMQ and a few workers who were reading the queues.
-      The number of active users was up to 50,000 per day.`
+            en: `I added a feature that mimics the mechanics of the popular dating app, Tinder, to an existing application of our client. 
+            The goal was to increase brand interest by creating a marketing app where users could actively engage with each other. 
+            Here's how it works: a user takes a test and sends a special link to another person. 
+            That person also takes the test and they both receive results with any matching score. 
+            The frontend was built using JavaScript and ReactJS, while the backend was created using PHP and Laravel, and the database was powered by MySQL. 
+            Users needed to receive notifications after their friends took the test, but because of platform limitations on push notifications (1 per day), 
+            I came up with a solution where users could activate a special chatbot and receive all notifications with results through messages from the bot. 
+            This was implemented using RabbitMQ and several workers that read the queues. We had up to 50,000 active users per day!`
         },
         images: [durex, durex_admin, durex_app]
     },
@@ -283,7 +296,9 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
       Due to the huge amount of records (50 000 000 per month on average), generation of such reports could take a long time. So we decided to prepare such reports and cache them in advance on the first day of each month.
       In order to validate the correctness of the data collected, the totals given by filters from Yandex.Direct and Google.Ads should match the data collected in ClickHouse.
       Free form reports could be obtained in two ways:
-      by requesting a report with the required parameters, after the report was generated, the system informed on the callback url and the integrated system only had to pick it up or by synchronous request, waiting for the system to generate the report (the decision was made by the contractor company, all the technical specialists were informed about the risks of this technical solution)
+      by requesting a report with the required parameters, after the report was generated, the system informed on the callback url and 
+      the integrated system only had to pick it up or by synchronous request, waiting for the system to generate the report 
+      (the decision was made by the contractor company, all the technical specialists were informed about the risks of this technical solution).
       `
         },
         images: []
@@ -296,12 +311,13 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
         logo: acg,
         description: { ru: `Создание сайта со стримингом motion-видео на превью`, en: `Creating a website with streaming motion video on the preview` },
         text: {
-            ru: `Во время создания сайта я обучал команду разработчиков.
-      Задачей было вставить видео на интро сайта в хорошем качестве. Видео необходимо было вставить на веб версию сайта и на мобильную версию,
-      с учетом медленного мобильного интернета.`,
-            en: `During the creation of the site, I trained the development team.
-      The task was to insert a video on the intro of the site in high quality.
-      The video needed to be inserted on the web version of the site and on the mobile version, taking into account the slow mobile internet speed.`
+            ru: `При создании проекта в сотруднечестве с UI/UX и моушен дизайнерами а также двумя начинающими разработчиками, задача выглядела так: 
+            получить дизайн и видео в 4к разрешении от дизайнеров, сверстать страницу и интегрировать видео.
+            Для оптимизации воспроизведения видео использовался HLS протокол, а в зависимости от размера экрана пользователя и скорости 
+            интернета использовалось потоковое видео предварительно подготовленное при помощи ffmpeg. Так же была разработана архитектура
+            платежной системы чтобы избавится от комиссий платежного сервисов.`,
+            en: `Creation of the Landing Page in collaboration with UI/UX and motion designers, as well as two beginner developers. The task was: get the design and video in 4k resolution from the design team, make front-end of the page, and integrate the video.
+HLS protocol was used to optimize video playback and depending on user screen size and Internet speed was used streaming video pre-prepared with the help of ffmpeg. The architecture of the payment system to get rid of the fees of the payment services.`
         },
         images: [acg_1,acg_2,acg_3,]
     },

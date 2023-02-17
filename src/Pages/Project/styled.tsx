@@ -8,9 +8,9 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export const RootStyled = styled('div')({
     display: "flex",
     flexDirection: "column",
-    //justifyContent: "space-between",
-    height: "fit-content",
-    minHeight: "100%",
+    alignItems: "stretch",
+    height: "100%",
+    flex: 1,
 });
 
 export const LogoImg = styled('img')({
@@ -30,7 +30,6 @@ export const NavigationRoot = styled('div')({
 });
 
 export const Content = styled('div')({
-    height: "100%",
     display: "flex",
     flexDirection: "column",
     width: "calc(100% - 40px)",

@@ -1,7 +1,9 @@
 import React, {createContext, useContext} from "react";
+import { Location } from "react-router-dom"
 
 export type GlobalContextProps = {
     onScroll:(e: React.UIEvent<HTMLDivElement>) => void,
+    onLocationChanged: (location: Location) => void,
     hideBecauseScroll: boolean,
     screenSize: {
         width: number,
@@ -11,6 +13,7 @@ export type GlobalContextProps = {
 
 export const GlobalContextDefault = {
     onScroll:(e: React.UIEvent<HTMLDivElement>) => {},
+    onLocationChanged:(location: Location) => {},
     hideBecauseScroll: false,
     screenSize: {
         width: window.innerWidth,

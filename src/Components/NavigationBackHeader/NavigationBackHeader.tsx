@@ -24,7 +24,7 @@ export const IconButtonStyled = styled(IconButton)({
 
 
 
-export const NavigationBackHeader = (props: React.PropsWithChildren) => {
+export const  NavigationBackHeader = (props: React.PropsWithChildren) => {
     const navigate = useNavigate();
 
     const onBackClick = () => {

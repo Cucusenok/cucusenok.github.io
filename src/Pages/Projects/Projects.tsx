@@ -26,7 +26,7 @@ const ProjectItem = ({item} : { item: ProjectType }) => {
                 </ProjectTitleContainer>
             </CardNavigationHeader>
             <ProjectItemCommonContainer>
-                <Typography variant={"h5"}>
+                <Typography variant={"h5"} textAlign={"left"} >
                     {item.description.en}
                 </Typography>
             </ProjectItemCommonContainer>

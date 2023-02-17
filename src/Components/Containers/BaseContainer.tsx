@@ -1,4 +1,4 @@
-import React, {CSSProperties} from "react";
+import React, {CSSProperties, useEffect} from "react";
 import {styled} from '@mui/system';
 import ProfileIconSvg from "../../Resources/Icons/ProfileIconSvg";
 import StackIcon from "../../Resources/Icons/StackIconSvg";
@@ -8,6 +8,12 @@ import {Typography, useTheme} from "@mui/material";
 import {useGlobalContext} from "../../common/globalContext";
 import { Collapse } from '@mui/material';
 
+type ChildrenProps = { css?: CSSProperties }
+type LinkType = {
+    icon: (props: React.SVGProps<any>) => JSX.Element,
+    link: string,
+    name: string,
+}
 const MENU_HEIGHT = 60;
 
 const Content = styled('div')({
@@ -29,12 +35,6 @@ const Menu = styled('div')({
 });
 
 
-type LinkType = {
-    icon: (props: React.SVGProps<any>) => JSX.Element,
-    link: string,
-    name: string,
-}
-
 const MENU_ITEMS: Array<LinkType> = [
     {
         icon: ProfileIconSvg,
@@ -53,8 +53,6 @@ const MENU_ITEMS: Array<LinkType> = [
     },
 ];
 
-
-
 const MenuItem = styled(Link)({
     textDecoration: "none",
     display: "flex",
@@ -64,18 +62,13 @@ const MenuItem = styled(Link)({
     padding: "7px 15px",
 })
 
-
-type ChildrenProps = { css?: CSSProperties }
 const Children = styled('div')<ChildrenProps>(({theme, css}) => ({
-    maxHeight: `calc(100% - 0px)`,
+    maxHeight: `100%`,
     flex: 1,
     display: "flex",
     flexDirection: "column",
     alignItems: "stretch",
     overflowY: "auto",
-    [theme.breakpoints.up('lg')] : {
-        maxHeight: `var(--app-height) !important`,
-    },
     ...css
 }));
 
@@ -106,7 +99,18 @@ export const RenderMenu = () => {
     return null
 }
 
+/*
+   Use this component as entrypoint for all pages
+   until dependency `onLocationChanged` is removed
+ */
 export const BaseContainer = (props: React.PropsWithChildren) => {
+    const location = useLocation();
+    const { onLocationChanged } = useGlobalContext();
+
+    useEffect(() => {
+        onLocationChanged(location)
+    }, [location, onLocationChanged])
+
     return <Content>
         <Children>
             {props.children}
