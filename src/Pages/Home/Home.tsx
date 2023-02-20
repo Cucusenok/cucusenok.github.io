@@ -89,7 +89,7 @@ export const Contacts = (props: ContactsProps) => {
                         <ListItemIcon>
                             <SendIcon color={"primary"} />
                         </ListItemIcon>
-                        <ListItemText primary="Sent mail" />
+                        <ListItemText primary="Send mail" />
                     </ListItemButton>
                 </LinkWrapper>
             </List>
