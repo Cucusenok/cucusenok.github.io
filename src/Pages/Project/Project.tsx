@@ -109,7 +109,7 @@ const Root = ({project} : ProjectProps) => {
         <Content>
             <Spacer height={20} />
             <Typography variant={"h2"} >
-                { project.title }
+                { project.title.en }
             </Typography>
             <Spacer height={20} />
             { project.url && <a href={project.url}>

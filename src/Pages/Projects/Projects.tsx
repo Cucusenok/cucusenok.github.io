@@ -61,7 +61,7 @@ export const Projects = ({ showTitle=true }: ProjectsProps) => {
         const searchStr = searchString.toLowerCase();
         const searchResult = PROJECT_ITEMS.filter( sl =>
             sl.description.en.toLowerCase().includes(searchStr)
-            || sl.title.toLowerCase().includes(searchStr)
+            || sl.title.en.toLowerCase().includes(searchStr)
             || sl.name.toLowerCase().includes(searchStr)
         )
         searchListSet(searchResult);

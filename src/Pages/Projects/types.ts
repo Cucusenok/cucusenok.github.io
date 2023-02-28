@@ -4,7 +4,7 @@ export type FormControlStyledProps = { inFocus?: boolean }
 
 export type ProjectType = {
     name: string,
-    title: string,
+    title: LocaleStringsType,
     position: string,
     url: string,
     logo: string,

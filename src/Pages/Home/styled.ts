@@ -1,7 +1,6 @@
 import {styled} from "@mui/system";
 import {TypographyOptions} from "@mui/material/styles/createTypography";
 import {Typography} from "@mui/material";
-import {Contacts} from "./Home";
 
 /*
     Breakpoints just for Home component

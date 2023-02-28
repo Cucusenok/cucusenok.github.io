@@ -50,7 +50,10 @@ import acg_3 from "../Resources/Projects/AppImages/acg/img_2.png"
 export const PROJECT_ITEMS: Array<ProjectType> = [
     {
         name: "5G(O-RAN)",
-        title: "Конфигурация устройств 3gpp/LTE/5g в архитектуре O-RAN",
+        title: {
+            ru: "Конфигурация устройств 3gpp/LTE/5g в архитектуре O-RAN",
+            en: "Configuration of devices 3gpp/LTE/5g in O-RAN architecture"
+        },
         url: "",
         position: "Software Engineer",
         logo: skoltech_5g,
@@ -84,7 +87,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "MAP",
-        title: "Создание системы оркестрации и мониторинга контейнеров",
+        title: {
+            ru: "Создание системы оркестрации и мониторинга контейнеров",
+            en: "System of orchestration and monitoring for containers"
+        },
         url: "",
         position: "Software Engineer",
         logo: skoltech_map,
@@ -121,7 +127,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "Go Music",
-        title: "Приложение для того чтобы распозновать и делиться музыкой.",
+        title: {
+            ru: "Приложение для того чтобы распозновать и делиться музыкой.",
+            en: "App for sharing and recognition music"
+        },
         url: "https://bike.net",
         position: "Software Engineer",
         logo: go_music,
@@ -169,7 +178,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "bike.net",
-        title: "Integration market place to social network ",
+        title: {
+            ru: "Интеграция маркет плейса в социальную сеть",
+            en: "Integration market place to social network",
+        },
         url: "https://bike.net",
         position: "Software Engineer",
         logo: bike_net,
@@ -182,7 +194,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "Neo4Web",
-        title: "Streaming service for apartments viewing",
+        title: {
+            ru: "Стриминговый сервис для подбора квартиры",
+            en: "Streaming service for apartments viewing"
+        },
         url: "https://www.sightline.se/neo4-web?lang=en",
         position: "Frontend Engineer",
         logo: sightline,
@@ -208,7 +223,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "Frieze",
-        title: "Online Viewing Room",
+        title: {
+            ru: "Онлайн галерея",
+            en: "Online Viewing Room",
+        },
         url: "https://www.sightline.se/neo4-web?lang=en",
         position: "Frontend Engineer",
         logo: frieze_logo,
@@ -225,7 +243,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "Durex(Match)",
-        title: "Создание Tinder-like приложения",
+        title: {
+            ru: "Создание Tinder-like приложения",
+            en: "Tinder-like application"
+        },
         url: "https://m.vk.com/app6999162",
         position: "Software Engineer",
         logo: durex_logo,
@@ -255,7 +276,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "KIA(CAP)",
-        title: "Система автоматической отчетности",
+        title: {
+            ru: "Система автоматической отчетности",
+            en: "The automatic reporting system"
+        },
         url: "https://m.vk.com/app6999162",
         position: "Software Engineer",
         logo: kia,
@@ -305,7 +329,10 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
     },
     {
         name: "Alfa Crypto Group",
-        title: "Система автоматической отчетности",
+        title: {
+            ru: "Alfa Crypto Group",
+            en: "Alfa Crypto Group"
+        },
         url: "https://echostudio.xyz/works.html",
         position: "Software Engineer",
         logo: acg,
